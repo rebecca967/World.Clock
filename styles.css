@@ -18,7 +18,7 @@ h1 {
   font-family: sans-serif;
 }
 h2{
-  margin: 2px;
+  margin: 0 auto;
   line-height: 1 ;
   font-size: 30px;
 }
@@ -46,9 +46,7 @@ select {
 
 .time {
   font-size: 38px;
-  
-  
-}
+ }
 
 .date{
   opacity: 0.7 ;

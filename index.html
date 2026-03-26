@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Clock</title>
   <link href="styles.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -18,7 +20,7 @@
     <option value="">Montreal</option>
 </select>
 
-<div class="city">
+<div class="city" id="los-angeles">
 <div>
 <h2>Los Angeles</h2>
 <div class="date"> March 24th 2024</div>
@@ -26,7 +28,7 @@
 <div class="time">3:22:15 <small>PM</small></div>
 </div>
 
-<div class="city">
+<div class="city" id="edmonton">
 <div>
 <h2>Edmonton</h2>
 <div class="date"> March 24th 2024</div>
