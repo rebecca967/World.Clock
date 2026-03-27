@@ -18,15 +18,19 @@ function updateTime() {
   edTime.innerHTML = edNow.format("h:mm:ss [<small>]A[</small>]");
 }
 function updateCity(event) {
-    let selectedOption = event.target.selectedOptions[0]; // get the option
-    let cityTimeZone = selectedOption.value; // timezone for Moment.js
-    let cityDisplayName = selectedOption.text; // the name to display
+    let selectedOption = event.target.selectedOptions[0]; 
+    let cityTimeZone = selectedOption.value; 
+    let cityDisplayName = selectedOption.text; 
+
+    if (!cityTimeZone === "current") {
+        cityTimeZone = moment.tz.guess();
+    }
 
     if (!cityTimeZone) {
         document.querySelector("#cities").innerHTML = "";
         return;
     }
-
+     
     let citiesElement = document.querySelector("#cities");
 
     let cityTime = moment().tz(cityTimeZone);
@@ -40,9 +44,11 @@ function updateCity(event) {
             <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
         </div>
     `;
-}
+  }
+  
 updateTime();
 setInterval(updateTime, 1000);
+
 
 
 let citiesSelectElement = document.querySelector("#city");
