@@ -40,9 +40,7 @@ select {
   padding: 20px;
 }
 
-.city:last-child{
-  border: none;
-}
+
 
 .time {
   font-size: 38px;

@@ -16,6 +16,16 @@ function updateTime() {
   let edNow = moment().tz("America/Edmonton");
   edDate.innerHTML = edNow.format("MMMM Do YYYY");
   edTime.innerHTML = edNow.format("h:mm:ss [<small>]A[</small>]");
+
+
+  // vancouver
+  let vaElement = document.querySelector("#vancouver");
+  let vaDate = vaElement.querySelector(".date");
+  let vaTime = vaElement.querySelector(".time");
+
+  let vaNow = moment().tz("America/Vancouver");
+  vaDate.innerHTML = vaNow.format("MMMM Do YYYY");
+  vaTime.innerHTML = vaNow.format("h:mm:ss [<small>]A[</small>]");
 }
 function updateCity(event) {
     let selectedOption = event.target.selectedOptions[0]; 
